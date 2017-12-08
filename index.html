@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	div{font-size:40px; font-family: 微软雅黑, 宋体, sans-serif;}
+	div strong{font-size: 60px; color:#ff6a00; margin-left:20px;}
+	</style>
+</head>
+<body>
+<div>今天忽悠大神是: <strong>你猜! 猜! 猜!</strong></div>
+<button>点俺全知道!</button>
+<script>
+var i=0; //变化次数=>计数器
+var timer=null;
+var oStr=document.getElementsByTagName("strong");
+var oBtn=document.getElementsByTagName("button");
+var Name =["王笛","王新博","王琪","赵强","吴占文","王楠","张鑫惠","刘国富","何宣杭","郑雪","张越","朱光曜"];
+
+function show(){
+	var key=parseInt(Math.random()*Name.length);
+	oStr[0].innerHTML=Name[key]
+	//console.log();
+	i++;//计数器
+	if(i==40){
+		clearInterval(timer);
+	}
+}
+
+timer=setInterval(show,60);
+</script>	
+</body>
+</html>
